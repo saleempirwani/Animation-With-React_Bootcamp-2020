@@ -20,7 +20,7 @@ const Cycle = () => {
     })
 
     return (
-        <div className="cycle" ref={ref}><img alt="" src={cycle} width="100" /></div>
+        <div className="cycle" ref={ref}><img alt="" src={cycle} width="90" /></div>
     )
 }
 

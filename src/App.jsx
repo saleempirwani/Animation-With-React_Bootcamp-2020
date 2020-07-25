@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Sky from './components/Sky'
@@ -9,22 +9,17 @@ import Road from './components/Road'
 
 function App() {
 
-  const [isDay, setIsDay] = useState(false)
+  const [isDay, setIsDay] = useState(true)
 
-  useEffect(() => {
-
-    setInterval(() => {
-      if (isDay) setIsDay(false)
-      else setIsDay(true)
-    }, 7000);
-
-  }, [isDay])
-
+  const dayHandler = (day) => {
+    setIsDay(day)
+    console.log(day)
+  }
 
   return (
     <div className='container'>
       <div className="mobile"><h1>Please use desktop or laptop screen</h1></div>
-      <Sky isDay={isDay} />
+      <Sky isDay={isDay} dayHandler={dayHandler} />
       <Mountain />
       <br /><br /><br /><br />
       <Grass isDay={isDay} />
