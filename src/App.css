@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mobile{
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sky{
+  background-color: lightblue;
+  height: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sun{
+  margin: 30px;
+  animation-name: sun;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.bird{
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  animation-name: bird;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.cloud{
+  position: absolute;
+  top: 0px;
+  right: 0;
+  text-align: right;
+  animation-name: cloud;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+ opacity: 0.8;
+}
+
+.mountain{
+  height: 220px;
+  position: absolute;
+  top: 20px;
+  left: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.mountain img{
+  width: 341.5px;
+  height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grass{
+  background-color: #61C235;
+  height: 180px;
+  padding: 20px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-end;
 }
+
+.dog{
+  width: 100px;
+  height: 80px;
+  animation-name: dog;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.road{
+  border-top: 20px solid gray;
+  background-color: #333;
+  height: 205px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line{
+  width: 100%;
+  height: 0px;
+  border-top: 20px white dashed;
+}
+
+.cycle{
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  animation-name: abc;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.car{
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  animation-name: abc;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@media (max-width: 1200px){
+
+  .mobile{display: block; margin-top: 100px; text-align: center;}
+  .sky, .mountain, .grass, .road {display: none;}
+
+}
+
+
+/* 
+@keyframes sun{
+  from {transform: rotate(0);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes bird{
+  from {transform: translateX(0);}
+  to {transform: translateX(1100px);}
+}
+
+@keyframes cloud{
+  from {transform: translateX(0);}
+  to {transform: translateX(-1100px);}
+}
+
+@keyframes dog{
+  from {transform: translateX(0);}
+  to {transform: translateX(-900px);}
+}
+
+@keyframes abc{
+  from {transform: translateX(0);}
+  to {transform: translateX(1100px);}
+} */
