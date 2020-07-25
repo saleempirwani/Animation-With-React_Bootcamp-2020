@@ -1,5 +1,4 @@
 import React from 'react';
-import useWebAnimations from "@wellyshen/use-web-animations";
 
 import Sun from './Sun'
 import Bird from './Bird'

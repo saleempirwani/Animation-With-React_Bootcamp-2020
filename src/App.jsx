@@ -13,7 +13,6 @@ function App() {
 
   const dayHandler = (day) => {
     setIsDay(day)
-    console.log(day)
   }
 
   return (
